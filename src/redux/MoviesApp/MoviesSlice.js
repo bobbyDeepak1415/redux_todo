@@ -2,8 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   value: [
-    { id: "1", name: "Star Wars" },
-    { id: "2", name: "Star Trek" },
+    { id: 1, name: "Star Wars" },
+    { id: 2, name: "Star Trek" },
   ],
 };
 
@@ -12,9 +12,15 @@ export const MoviesSlice = createSlice({
   initialState,
   reducers: {
     addMovie: (state, action) => {
-      state.moviesList.push(action.payload);
+      const newMovie = {
+        id: state.value[state.value.length - 1].id + 1,
+        name: action.payload,
+      };
+      state.value.push(newMovie);
     },
-    removeMovie: (state, action) => {},
+    removeMovie: (state, action) => {
+      state.value = state.value.filter((movie) => movie.id !== action.payload);
+    },
   },
 });
 

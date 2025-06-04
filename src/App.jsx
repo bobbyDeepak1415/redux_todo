@@ -9,7 +9,7 @@ import { MovieInput } from "./redux/MoviesApp/MovieInput";
 function App() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <MovieInput />
       <MoviesList />
     </div>
