@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { addMovie } from "./MoviesSlice";
 import { useDispatch } from "react-redux";
 
-export function MovieInput(props) {
+export function MovieInput() {
   const [newMovie, setNewMovie] = useState("");
   const dispatch = useDispatch();
 
