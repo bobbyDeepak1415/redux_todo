@@ -8,7 +8,7 @@ export default function Navbar() {
     <div>
       <h1>
         Navbar here:
-        {movies.length > 0 ? <li>{movies[0].name} </li> : <li>none</li>}
+        {movies.length > 0 ? <li>{movies[1].name} </li> : <li>none</li>}
       </h1>
     </div>
   );
